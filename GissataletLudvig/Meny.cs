@@ -9,7 +9,7 @@ internal class Menu
 {
     public static void StartMenu()
     {
-        string[] menuOptions = { "Lätt (30)", "Medium (60)", "Svår (120)", "Leaderboard", "Exit" };
+        string[] menuOptions = { $"{CO.Green("Lätt (30)")}", $"{CO.Yellow("Medium (60)")}", $"{CO.Red("Svår (120)")}", $"{CO.Cyan("Leaderboard")}", $"{CO.Red("Exit")}" };
         int menuSelecter = 0;
 
         while (true)
@@ -20,9 +20,8 @@ internal class Menu
             {
                 if (i == menuSelecter)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"{menuOptions[i]}\t<--");
-                    Console.ResetColor();
+                    Console.WriteLine($"\t{menuOptions[i]}\t{CO.Magenta("<")}{CO.Blue("-")}{CO.Cyan("-")}");
+                    Console.CursorVisible = false;
                 }
                 else
                     Console.WriteLine(menuOptions[i]);
@@ -39,7 +38,7 @@ internal class Menu
                 switch (menuSelecter)
                 {
                     case 0:
-                        //Easy.StarGame();
+                        Easy.StartEasyGame();
                         break;
                     case 1:
                         //Medium.StarGame();

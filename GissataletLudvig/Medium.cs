@@ -8,5 +8,6 @@ namespace GissataletLudvig
 {
     internal class Medium
     {
+
     }
 }
