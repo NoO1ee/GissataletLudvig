@@ -38,16 +38,18 @@ internal class Menu
                 switch (menuSelecter)
                 {
                     case 0:
-                        Easy.StartEasyGame();
+                        Game.StartGame(1);
                         break;
                     case 1:
-                        //Medium.StarGame();
+                        Game.StartGame(2);
                         break;
                     case 2:
-                        //Hard.StarGame();
+                        Game.StartGame(3);
                         break;
                     case 3:
-                        //Leaderboard.CheckLeaderboard();
+                        Console.Clear();
+                        Game.DisplayLeaderBoard();
+                        Thread.Sleep(5000);
                         break;
                     case 4:
                         Console.Clear();

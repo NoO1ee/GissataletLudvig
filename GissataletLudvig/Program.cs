@@ -6,7 +6,7 @@ namespace GissataletLudvig;
 
 internal class Program
 {
-    static string? name;
+    public static string? name;
     public static Stopwatch time = new Stopwatch();
 
     static void Main(string[] args)
